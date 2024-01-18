@@ -96,10 +96,11 @@ input[type="email"] {
     background-color: #17181B;
     border: 1px solid white;
     border-radius: 5px;
+    padding: 15px;
+    color: white !important;
 }
 textarea,
 input::placeholder{
-    font-size: 0.75rem !important;
     padding-left: 10px;
     vertical-align: middle;
 }
