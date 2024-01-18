@@ -105,7 +105,7 @@
                             </div>
                            </div>
                             <div class="me-auto">
-                                <button class=" btn btn-main">Download CV</button>
+                                <button class=" btn btn-main" id="downloadButton" onclick="downloadPDF()">Download CV</button>
                             </div>
 
 
@@ -376,6 +376,28 @@
 
         </div>
     </div>
+    <script>
+        function downloadPDF() {
+            // Replace 'path/to/your/file.pdf' with the actual path to your PDF file
+            var pdfUrl = 'images/resume_navin.pdf';
+
+            // Creating a temporary link element
+            var link = document.createElement('a');
+            link.href = pdfUrl;
+            link.target = '_blank';
+            link.download = 'downloaded_file.pdf'; // You can change the downloaded file name
+
+            // Appending the link to the body
+            document.body.appendChild(link);
+
+            // Triggering the click event to start the download
+            link.click();
+
+            // Removing the link from the DOM
+            document.body.removeChild(link);
+        }
+
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
