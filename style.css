@@ -27,6 +27,11 @@ body{
     border-radius: 20px;
 
 }
+.bg{
+    background-color: #80849240;
+    padding: 15px;
+    border-radius: 8px;
+}
 
 @keyframes typing {
     from {
@@ -55,6 +60,12 @@ body{
 .btn-main{
     background-color: white;
     color: #17181B;
+}
+.btn-main:hover,
+.btn-main.show{
+    background-color: #17181B;
+    border:1px solid white;
+    color: white  !important;
 }
 .progress{
     height: 8px;
@@ -96,11 +107,25 @@ input[type="email"] {
     background-color: #17181B;
     border: 1px solid white;
     border-radius: 5px;
-    padding: 15px;
+    padding: 15px !important;
     color: white !important;
 }
 textarea,
 input::placeholder{
     padding-left: 10px;
     vertical-align: middle;
+}
+@media only screen and (max-width: 600px) {
+    .auto-type {
+        border-right: .1em solid #fff;
+        width: 16.5em;
+        width: 14ch;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: typing 7s steps(21, end),
+            blink-caret .5s step-end infinite alternate;
+            font-family: 'Kavoon', sans-serif;
+            font-weight: 500;
+            font-size: 2.5rem;
+    }
 }
