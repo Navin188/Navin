@@ -32,6 +32,10 @@ body{
     padding: 15px;
     border-radius: 8px;
 }
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: black;
+    background-color: white;
+}
 
 @keyframes typing {
     from {
