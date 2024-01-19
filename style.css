@@ -12,6 +12,7 @@ body{
 }
 .navbar ul li a{
     color: #fff;
+    margin-inline: 5px;
 }
 .main-content {
    height: calc( 55px - 100vh);
@@ -33,7 +34,10 @@ body{
     border-radius: 8px;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+.nav-pills .nav-link.active,
+.nav-link:focus,
+.nav-link:hover,
+.nav-pills .show>.nav-link {
     color: black;
     background-color: white;
 }
