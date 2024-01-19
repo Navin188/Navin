@@ -82,6 +82,12 @@ body{
     background-color: transparent !important;
     border: 1px solid #fff;
     color: white !important;
+    transition: all 0.7s;
+}
+.hover-card .card:hover{
+    background-color: white !important;
+    border: 1px solid #fff;
+    color: #000 !important;
 }
 .card p{
   font-size: 0.85rem;
