@@ -1,150 +1,255 @@
-body{
-    background-color: #17181B;
-    color: #fff;
-    font-family: 'Inter', sans-serif;
-/* font-family: 'Kavoon', serif; */
-    
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Merienda", serif !important; */
+  font-family: "Roboto", serif !important;
+  background-color: #1e1e1e !important;
+  position: relative;
+  overflow: hidden;
 }
-.navbar {
-    height: 55px;
-    background-color: #6b63e3 !important;
-    z-index: 999;
+
+#topbar {
+  background-color: #3c3c3c;
+  color: #f3f3f3;
+  padding-block: 8px;
 }
-.navbar ul li a{
-    color: #fff;
-    margin-inline: 5px;
+
+#topbar span {
+  color: #2794cf;
 }
-.main-content {
-   height: calc( 55px - 100vh);
-   padding-top: 60px;
-   z-index: -999;
+
+#topbar .name {
+  border: 1px solid #757575;
+  border-radius: 6px;
+  padding-block: 1px;
+  text-align: center;
+}
+
+/* VS Code-like Container */
+.vscode-container {
+  display: flex;
+  height: 100vh;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  font-family: "Roboto", serif !important;
+}
+
+/* Sidebar Styling */
+.vscode-sidebar {
+  width: 250px;
+  background-color: #252526;
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  border-right: 1px solid #333;
+  transition: all 0.6s;
+ 
+}
+
+.accordion {
+  --bs-accordion-bg: transparent !important;
+}
+
+.accordion-button:not(.collapsed),
+button.accordion-button.collapsed {
+  background-color: #252526 !important;
+  color: white !important;
+  box-shadow: none !important;
+  padding: 10px !important;
+  padding-inline: 15px;
+  font-size: 0.8rem;
+}
+
+.accordion-body {
+  background-color: #252526 !important;
+  color: white !important;
+  padding: 5px !important;
+  font-size: 0.85rem;
+}
+
+.accordion-body:focus-within,
+.accordion-item {
+  border: none !important;
+}
+
+.accordion-button::after {
+  filter: contrast(0) !important;
+}
+
+.vscode-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.vscode-sidebar li {
+  padding: 10px;
+  cursor: pointer;
+  color: #d4d4d4;
+  font-family: "Roboto", serif !important;
+  word-spacing: 5px;
+}
+
+.vscode-sidebar li:hover {
+  background-color: #3c3c3c;
+  color: #ffffff;
+}
+
+/* Main Content Styling */
+.vscode-editor {
+  font-family: "Roboto", serif !important;
+  padding: 20px;
+  width: 100%;
+ 
+}
+
+.accordion .accordion-body ul li {
+  list-style-type: none;
+  font-family: "Roboto", serif !important;
+}
+
+
+
+/* Section Visibility */
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+/* Scrollbar Styling */
+.vscode-editor::-webkit-scrollbar {
+  width: 10px;
+}
+
+.vscode-editor::-webkit-scrollbar-thumb {
+  background: #007acc;
+  border-radius: 5px;
+}
+
+.vscode-editor::-webkit-scrollbar-thumb:hover {
+  background: #005a9e;
+}
+
+.btn-social {
+  color: #fff !important;
+}
+
+.btn-tab {
+  color: #fff !important;
+}
+
+.vscode-main {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  padding-bottom: 40px;
+}
+
+.tabs {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+  background-color: #1e1e1e;
+  width: 100%;
+}
+
+.tabs .btn-tab {
+  background-color: #3c3c3c;
+  border-radius: 0px !important;
+  padding-inline: 25px;
+  font-size: 0.85rem;
+  border: none !important;
+}
+
+.tabs .btn-tab:focus,
+.tabs .btn-tab.show,
+.tabs .btn-tab:hover,
+.tabs .btn-tab:active,
+.tabs .btn-tab.active {
+  border: none !important;
+}
+
+.active-item {
+  background-color: #252526 !important;
+  /* Example active color */
+  color: #a9854d !important;
+}
+
+.btn-icon-sm {
+  width: 30px !important;
+  min-width: 30px !important;
+  height: 30px !important;
+  padding: 0px !important;
 }
 
 .front-img {
-    height: 510px;
-    width: 100%;
-    object-fit: cover;
-    background-size: cover;
-    border-radius: 20px;
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+  background-size: cover;
+  border-radius: 20px;
 
 }
-.bg{
-    background-color: #80849240;
-    padding: 15px;
-    border-radius: 8px;
+#expreience .card{
+  border: none;
+  background-color: transparent;
+  color: #fff;
 }
-
-.nav-pills .nav-link.active,
-.nav-link:focus,
-.nav-link:hover,
-.nav-pills .show>.nav-link {
-    color: black;
-    background-color: white;
+#expreience .card-body{
+  background-color: transparent !important;;
+  color: #fff;
 }
-
-@keyframes typing {
-    from {
-        width: 0;
-    }
+#expreience .card .card-body ul{
+  padding-left: 15px;
 }
-
-@keyframes blink-caret {
-    50% {
-        border-color: transparent;
-    }
+#expreience .card .card-body ul li{
+  list-style-type: square;
+  line-height: 2rem;
+  font-size: 0.8rem;
 }
-
-.auto-type {
-    border-right: .1em solid #fff;
-    width: 16.5em;
-    width: 14ch;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: typing 7s steps(21, end),
-        blink-caret .5s step-end infinite alternate;
-        font-family: 'Kavoon', sans-serif;
-        font-weight: 500;
-        font-size: 3rem;
+.footer{
+  background-color: #2794CF !important;
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  color: #fff;
+  font-size: 0.7rem;
+  padding-block: 5px;
+}
+#projects .progress{
+  height: 8px;
+}
+#projects .progress-bar{
+  background-color: #ff00009c;
+}
+#projects .card{
+  background-color: transparent !important;
+  border: 1px solid #fff;
+  color: white !important;
+  transition: all 0.7s;
+}
+#projects .hover-card .card:hover{
+  background-color: white !important;
+  border: 1px solid #fff;
+  color: #000 !important;
+}
+#projects .card p{
+font-size: 0.85rem;
+}
+#projects .card h4{
+font-size: 0.95rem;
+}
+#projects .cara-card{
+padding: 50px;
 }
 .btn-main{
-    background-color: white;
-    color: #17181B;
+  background-color: white !important;
+  color: #17181B !important;
 }
 .btn-main:hover,
 .btn-main.show{
-    background-color: #17181B;
-    border:1px solid white;
-    color: white  !important;
-}
-.progress{
-    height: 8px;
-}
-.progress-bar{
-    background-color: #ff00009c;
-}
-.card{
-    background-color: transparent !important;
-    border: 1px solid #fff;
-    color: white !important;
-    transition: all 0.7s;
-}
-.hover-card .card:hover{
-    background-color: white !important;
-    border: 1px solid #fff;
-    color: #000 !important;
-}
-.card p{
-  font-size: 0.85rem;
-}
-.card h4{
-  font-size: 0.95rem;
-}
-.cara-card{
-padding: 50px;
-}
-.accordion-button:not(.collapsed),
-button.accordion-button.collapsed {
-    background-color: #17181B;
-    color: white;
-    box-shadow: none !important;
-    border: 1px solid #fff;
-}
-.accordion-body {
-    background-color: #17181B !important;
-    color: white !important;
-    border: 1px solid  white !important;
-}
-.accordion-button::after {
-    filter: contrast(0) !important;
-}
-textarea,
-input[type="email"] {
-    background-color: #17181B;
-    border: 1px solid white;
-    border-radius: 5px;
-    padding: 15px !important;
-    color: white !important;
-}
-textarea,
-input::placeholder{
-    padding-left: 10px;
-    vertical-align: middle;
-}
-@media only screen and (max-width: 600px) {
-    .auto-type {
-        border-right: .1em solid #fff;
-        width: 16.5em;
-        width: 14ch;
-        white-space: nowrap;
-        overflow: hidden;
-        animation: typing 7s steps(21, end),
-            blink-caret .5s step-end infinite alternate;
-            font-family: 'Kavoon', sans-serif;
-            font-weight: 500;
-            font-size: 2.5rem;
-    }
-    .borderfront{
-        border-bottom: 1px solid white  !important;
-        padding-bottom: 15px !important;
-    }
+  background-color: #17181B !important;
+  border:1px solid white !important;
+  color: white  !important;
 }
