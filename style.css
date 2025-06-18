@@ -253,3 +253,11 @@ padding: 50px;
   border:1px solid white !important;
   color: white  !important;
 }
+@media only screen and (max-width: 600px) {
+.vscode-sidebar{
+  display: none;
+}
+.tabs .btn-tab{
+  width: 100% !important;
+}
+}
